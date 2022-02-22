@@ -16,3 +16,8 @@ app.listen(port, () => {
     console.log(`Server is listening at http://localhost:${port}/`);
 
 });
+
+const Blockchain = require("./src/blockchain");
+global.difficulty = 1;
+global.blockchain = new Blockchain();
+global.transactions = [];
