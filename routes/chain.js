@@ -1,25 +1,11 @@
-
-
+// Function to view the entire blockchain
 function chain(app) {
-
-    // Print out the entire blockchain
-
     app.get("/chain", function (request, response) {
-
-        // Formulate a response message
-
+        // Grabs the string representation of our blockchain
         let chainStr = global.blockchain.prettify();
-
-
-
-        // Send the response for printing out the blockchain
-
         response
-
-            .status(200) // HTTP status code 200: OK
-
-            .send(chainStr); // Response message
-
+            .status(200)
+            .send(chainStr); // Respond with this string
     });
 
 }

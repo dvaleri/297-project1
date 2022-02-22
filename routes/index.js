@@ -1,5 +1,8 @@
+// Imports
 const fs = require("fs");
 
+// Reads all the file names in this directory (routes), skipping this file
+// Grabs all these files and loads them as routes.
 function dynamicallyLoadRoutes(app) {
     fs.readdirSync(__dirname).forEach(function (file) {
         if (
